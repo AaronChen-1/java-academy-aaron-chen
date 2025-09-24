@@ -21,7 +21,7 @@ public class VariableApp {
         System.out.println("There are " + daysInWeek + "days in the week");
         System.out.println(priceOfCoffee + " is the price of the coffee.");
         System.out.println("My favorite letter is " + favoriteLetter);
-        System.out.println("Is it raining? " + isRaining);
+        System.out.println("Is it raining now?" + isRaining);
         // REPEAT FOR NEXT EXERCISE
     }
 }
