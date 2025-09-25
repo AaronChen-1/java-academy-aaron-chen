@@ -23,7 +23,7 @@ public class Movie {
             System.out.println("Popcorn time!");
         }
         else{
-            System.out.println("No more popcorn");
+            System.out.println("No more popcorn.");
         }
     }
 }
