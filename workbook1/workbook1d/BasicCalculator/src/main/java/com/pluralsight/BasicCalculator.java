@@ -35,8 +35,13 @@ public class BasicCalculator {
                 System.out.printf("Result: %.2f * %.2f = %.2f%n", num1, num2, result);
                 break;
             case 'D':
-                result = num1 / num2;
-                System.out.printf("Result: %.2f / %.2f = %.2f%n", num1, num2, result);
+                if (num2 !=0) {
+                    result = num1 / num2;
+                    System.out.printf("Result: %.2f / %.2f = %.2f%n", num1, num2, result);
+                }
+                else {
+                    System.out.println("cannot divide by 0");
+                }
                 break;
             default:
                 System.out.println("Invalid option. Please select 'A' 'S' 'M' 'D' ");
