@@ -21,6 +21,7 @@ public class BasicCalculator {
 
         float result = 0; //placeholder
 
+        //im using switch instead of if/else here to make it more neat. also printf instead of concatenating a bunch
         switch(choice) {
             case 'A':
                 result = num1 + num2;
