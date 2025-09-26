@@ -39,7 +39,7 @@ public class SandwichShop {
             price = 8.95f;
         }
         else{
-            System.out.println("invalid input: try again (1-2)");
+            System.out.println("invalid input: try again (1-2):");
         }
 
 
