@@ -10,6 +10,23 @@ public class SandwichShop {
         System.out.println("2: Large: base price $8.95");
         int option = scanner.nextInt();
 
+        System.out.println("Would you like your sandwich loaded? (yes/no)");
+        System.out.println("Regular + $1.00");
+        System.out.println("Large + $1.75");
+
+        String loaded = scanner.next().toLowerCase();
+
+        float loadedPrice = 0f;
+
+        if(loaded.equals("yes")) {
+            if (option == 1){
+                loadedPrice = 1.00f;
+            } else if (option == 2){
+                loadedPrice = 1.75f;
+            }
+        }
+
+
         System.out.println("How old are you?");
         int age = scanner.nextInt();
 
@@ -25,6 +42,7 @@ public class SandwichShop {
             System.out.println("invalid input: try again (1-2)");
         }
 
+
         float discount = 0f;
 
         if(age <=17){
@@ -34,7 +52,7 @@ public class SandwichShop {
             discount = .20f;
         }
 
-        float finalPrice = price * (1-discount);
+        float finalPrice = (price + loadedPrice) * (1-discount);
         System.out.printf("Your sandwich costs $%.2f", finalPrice);
     }
 }
