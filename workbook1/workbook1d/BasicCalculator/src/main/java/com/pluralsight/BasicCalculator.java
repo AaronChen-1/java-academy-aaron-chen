@@ -47,6 +47,5 @@ public class BasicCalculator {
             default:
                 System.out.println("Invalid option. Please select 'A' 'S' 'M' 'D' ");
         }
-
     }
 }
