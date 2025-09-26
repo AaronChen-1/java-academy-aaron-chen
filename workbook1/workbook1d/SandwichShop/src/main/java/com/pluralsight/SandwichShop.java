@@ -56,4 +56,3 @@ public class SandwichShop {
         System.out.printf("Your sandwich costs $%.2f", finalPrice);
     }
 }
-if
