@@ -1,4 +1,4 @@
 package com.dealership;
 
-public class Main {
+public class Program {
 }
