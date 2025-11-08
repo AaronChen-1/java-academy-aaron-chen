@@ -38,6 +38,28 @@ public class DealershipFileManager {
     }
 
     public void saveDealership(Dealership dealership) {
-        // Implement in Phase 5
+        try (PrintWriter writer = new PrintWriter(new FileWriter(FILE_NAME))) {
+            // Write dealership info
+            writer.println(dealership.getName() + "|" + dealership.getAddress() + "|" + dealership.getPhone());
+
+            // Write each vehicle
+            for (Vehicle v : dealership.getAllVehicles()) {
+                writer.println(
+                        v.getVin() + "|" +
+                                v.getYear() + "|" +
+                                v.getMake() + "|" +
+                                v.getModel() + "|" +
+                                v.getVehicleType() + "|" +
+                                v.getColor() + "|" +
+                                v.getOdometer() + "|" +
+                                v.getPrice()
+                );
+            }
+
+            System.out.println("Dealership saved successfully.");
+
+        } catch (IOException e) {
+            System.out.println("Error saving dealership: " + e.getMessage());
+        }
     }
 }
